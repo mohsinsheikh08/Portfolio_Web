@@ -5,10 +5,12 @@ const authRoutes = require('./router/auth.routes.js')
 const projectRoutes = require('./router/project.routes.js')
 const messageRoutes = require('./router/message.routes.js')
 const cors = require("cors");
+
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://portfolio-web-chi-rouge-33.vercel.app"],
     credentials: true,
 }));
+
 app.use(express.json());
 app.use(cookieParser());
 app.use('/api/auth', authRoutes)

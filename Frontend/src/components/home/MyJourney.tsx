@@ -9,7 +9,7 @@ const MyJourney = () => {
         </p>
       </div>
       <div className=" text-xs mt-4 leading-6 pl-5 border-l-2 border-[#3F0091] ">
-        <p className="text-[#4e525a] text-sm md:text-lg md:leading-12 leading-10">
+        <p className="text-[#4e525a] text-sm md:text-lg md:leading-12 leading-8">
           <span className="text-[#3F0091] pr-1">
             Started with HTML, CSS, and JavaScript. 
           </span>

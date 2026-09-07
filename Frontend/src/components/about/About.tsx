@@ -39,13 +39,13 @@ const About = () => {
     if (loading) return <LoadingPage />;
   return (
     <div>
-      <div className="flex px-10 flex-col justify-between  pt-10  justify-center w-full">
+      <div className="flex px-10 flex-col justify-between  pt-10  w-full">
         <p className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl min-w-100 font-[800]">
           About <span className="text-[#3F0091]">Me</span>
         </p>
         <div className="w-30 md:min-w-30 pt-4 xl:w-20 responsive4 h-full flex  justify-end items-start"></div>
       </div>
-      <div className="border-l-3 text-xs md:text-sm mx-10 min-[400px]:text-md text-sm text-[#24282e] rounded-r-3xl border-[#3F0091] pl-5 mt-10 tracking-wide leading-10 font-[400]">
+      <div className="border-l-3 text-xs md:text-sm mx-10 min-[400px]:text-md leading-8 text-[#24282e] rounded-r-3xl border-[#3F0091] pl-5 mt-10 tracking-wide ">
         <p>
           I'm <span className="text-[#3F0091]">Mohsin Sheikh</span> — an
           18-year-old
@@ -89,7 +89,7 @@ const About = () => {
         </p>
       </div>
 
-      <div className="flex px-10 flex-col justify-between  pt-10  justify-center w-full">
+      <div className="flex px-10 flex-col justify-between  pt-10   w-full">
         <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl min-w-100 font-[800]">
           Contact <span className="text-[#3F0091]">Me</span>
         </p>

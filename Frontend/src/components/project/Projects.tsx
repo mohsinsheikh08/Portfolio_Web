@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import axios from "axios";
-
+import LoadingPage from "../LoadingPage";
 interface allProjects {
   _id: string;
   description: string;
@@ -15,9 +15,11 @@ interface allProjects {
 
 const Projects = () => {
   const [projects, setProjects] = useState<allProjects[]>([]);
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     const getData = async () => {
       try {
+        setLoading(true)
         const response = await axios.get(
           `${import.meta.env.VITE_API_URL}/api/project/all-projects`,
         );
@@ -27,13 +29,15 @@ const Projects = () => {
           console.log("Error status:", error.response?.status);
           console.log("Error data:", error.response?.data);
           console.log("Error message:", error.response?.data?.message);
-          alert(error.response?.data?.message || "Failed to update project");
         }
+      }finally{
+        setLoading(false)
       }
     };
     getData();
   }, []);
 
+    if (loading) return <LoadingPage />;
   return (
     <div>
       <div className="flex px-10 flex-col justify-between  pt-10  justify-center w-full">

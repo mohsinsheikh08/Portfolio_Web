@@ -1,6 +1,7 @@
 import { Mail, Phone } from "lucide-react";
 import axios from "axios";
 import React, { useState } from "react";
+import LoadingPage from "../LoadingPage";
 const About = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -35,6 +36,7 @@ const About = () => {
       setLoading(false)
     }
   }
+    if (loading) return <LoadingPage />;
   return (
     <div>
       <div className="flex px-10 flex-col justify-between  pt-10  justify-center w-full">

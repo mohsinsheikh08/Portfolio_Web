@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import LoadingPage from "./LoadingPage";
 const Login = () => {
   const navigate = useNavigate()
   const [email, setEmail] = useState<string>("");
@@ -22,13 +23,12 @@ const Login = () => {
                 console.log("Error status:", error.response?.status);
                 console.log("Error data:", error.response?.data);
                 console.log("Error message:", error.response?.data?.message);
-                alert(error.response?.data?.message || "Failed to update project");
       };
     } finally {
       setLoading(false);
     }
   };
-
+  if (loading) return <LoadingPage />;
   return (
     <div className="w-full flex justify-center items-center min-h-screen">
       <div className="border-2 my-10 w-80 rounded-xl">

@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { MoveUpRight } from "lucide-react";
 import MyPic from "../assets/MyPic1.png";
+import { Link } from "react-router-dom";
 interface Links {
   icon: IconDefinition;
   name: string;
@@ -52,13 +53,13 @@ const Footer = () => {
           Together, we can create something clear and impactful. Let's
           collaborate to bring ideas to life.
         </p>
-        <div className="  h-full flex items-center justify-center my-5 ">
+       <Link to='/about'> <div className="  h-full flex items-center justify-center my-5  ">
           <button className=" px-4 shadow-[0px_2px_10px_2px_rgba(0,0,0,0.2)]  flex justify-between  text-md items-center py-[7px] rounded-full transition-all duration-300 cursor-pointer  hover:scale-110  font-[550] bg-black text-white hover:bg-[#333333]">
             Let's Talk <MoveUpRight size={23} />
           </button>
-        </div>
+        </div></Link>
       </div>
-      <div className=" flex justify-center  gap-2 min-[550px]:gap-5 items-center   px-20 flex-wrap">
+      <div className=" flex justify-center mt-5  gap-2 min-[550px]:gap-5 items-center   px-20 flex-wrap">
         <div className="border-2 cursor-pointer hidden md:flex rounded-full flex flex-wrap border-black/50 w-40 pl-1 pr-3 items-center justify-between py-1 font-[550]  shadow-[0px_2px_10px_2px_rgba(0,0,0,0.1)]  hover:border-transparent bg-black text-white transition-all duration-300 mb-8 ease-in-out">
           <img
             className="w-6 object-contain rounded-full pb-1"

@@ -124,7 +124,6 @@ const EditProject = () => {
           console.log("Error status:", error.response?.status);
           console.log("Error data:", error.response?.data);
           console.log("Error message:", error.response?.data?.message);
-          alert(error.response?.data?.message || "Failed to update project");
         }
       }finally{
         setLoading(true)

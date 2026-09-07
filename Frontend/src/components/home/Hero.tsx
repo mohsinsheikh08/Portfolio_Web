@@ -48,8 +48,8 @@ const Hero = () => {
           </button>
         </a>
       </div>
-      <div className="relative w-90 sm:w-140 lg:w-200 lg:pr-15 md:w-180 flex justify-center">
-        <img className="absolute md:-left-0 left-0 animate" src={MyName} alt="" />
+      <div className="relative w-90 sm:w-140 lg:w-500 lg:pr-15 md:w-180 flex justify-center">
+        <img className="absolute md:-left-10 w-400 left-0 animate" src={MyName} alt="" />
         <img
           className="w-50 sm:w-70 md:w-100 lg:w-128  relative  z-1 object-contain"
           src={MyImg}
@@ -59,7 +59,7 @@ const Hero = () => {
       <div className=" hidden flex-col gap-9 lg:flex hidden gap-3 flex-col md:pr-5 md:pb-5">
        {links.map((link, index) => {
         return <a key={index}  href={link.link}>
-          <button className=" cursor-pointer hover:bg-[#6E06F2] hover:text-white transition-all duration-300 ease-in-out hover:border-transparent border-2 flex justify-center items-center w-full px-7 shadow-lg py-1 rounded-full " key={index}>
+          <button className=" cursor-pointer hover:bg-[#6E06F2] font-bold hover:text-white transition-all duration-300 ease-in-out hover:border-transparent border-2 flex justify-center items-center w-full px-7 shadow-lg py-1 rounded-full " key={index}>
           <FontAwesomeIcon icon={link.icon} />
           <p>{link.name}</p>
         </button>

@@ -49,7 +49,7 @@ const Skills = () => {
             <h3 className="md:text-xl font-bold text-black">{item.category}</h3>
             <ul className="space-y-1">
               {item.skills.map((skill, idx) => (
-                <li key={idx} className="text-[#4F5863] text-xs">
+                <li key={idx} className="text-[#4F5863] text-xs md:text-sm">
                   {skill}
                 </li>
               ))}

@@ -64,7 +64,7 @@ const Projects = () => {
     <div className="w-full md:px-7">
       <div className="py-3 px-5 md:px-0 flex justify-between items-center">
         <p className="text-3xl md:text-5xl font-extrabold">
-          Projects<span className="text-5xl sm:text-7xl text-[#6E06F2]">.</span>
+          Projects<span className="text-5xl sm:text-7xl text-[#3F0091]">.</span>
         </p>
 
         <Link to="/projects">
@@ -110,8 +110,8 @@ const Projects = () => {
                 {project.projectName}
               </div>
               <div className=" flex gap-3">
-                <a target="_blank"  href={project.liveLink}><div className="border-2 transition-all duration-300 ease-in-out hover:border-transparent border-[#4e525a]/80 rounded-full hover:bg-[#6E06F2] hover:text-white p-1"><LinkIcon size={22} /></div></a>
-                 <a target="_blank"  href={project.githubLink}><div className="border-2 transition-all duration-300 ease-in-out hover:border-transparent border-[#4e525a]/80 rounded-4xl hover:bg-[#6E06F2] hover:text-white p-1">< FontAwesomeIcon size='lg' icon={faGithub}  /></div></a>
+                <a target="_blank"  href={project.liveLink}><div className="border-2 transition-all duration-300 ease-in-out hover:border-transparent border-[#4e525a]/80 rounded-full hover:bg-[#3F0091] hover:text-white p-1"><LinkIcon size={22} /></div></a>
+                 <a target="_blank"  href={project.githubLink}><div className="border-2 transition-all duration-300 ease-in-out hover:border-transparent border-[#4e525a]/80 rounded-4xl hover:bg-[#3F0091] hover:text-white p-1">< FontAwesomeIcon size='lg' icon={faGithub}  /></div></a>
                
               </div>
             </div>
@@ -120,7 +120,7 @@ const Projects = () => {
               {project.techStack.map((stack, index) => (
                 <span
                   key={index}
-                  className="text-[8px] lg:text-[11px] border px-3 py-1 rounded-full font-semibold text-[#4e525a] hover:bg-[#6E06F2] hover:text-white transition-all duration-200 cursor-pointer"
+                  className="text-[8px] lg:text-[11px] border px-3 py-1 rounded-full font-semibold text-[#4e525a] hover:bg-[#3F0091] hover:text-white transition-all duration-200 cursor-pointer"
                 >
                   {stack}
                 </span>

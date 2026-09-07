@@ -46,7 +46,7 @@ const Register = () => {
           <div className="flex gap-2">
             <label>
               <p className="font-semibold text-[#4e525a]">
-                First Name <span className="text-[#6E06F2]">*</span>
+                First Name <span className="text-[#3F0091]">*</span>
               </p>
               <input
                 value={firstName}
@@ -61,7 +61,7 @@ const Register = () => {
             </label>
             <label>
               <p className="font-semibold text-[#4e525a]">
-                Last Name <span className="text-[#6E06F2]">*</span>
+                Last Name <span className="text-[#3F0091]">*</span>
               </p>
               <input
                 value={lastName}
@@ -77,7 +77,7 @@ const Register = () => {
           </div>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Email <span className="text-[#6E06F2]">*</span>
+              Email <span className="text-[#3F0091]">*</span>
             </p>
             <input
               value={email}
@@ -90,7 +90,7 @@ const Register = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Password <span className="text-[#6E06F2]">*</span>
+              Password <span className="text-[#3F0091]">*</span>
             </p>
             <input
               value={password}
@@ -109,7 +109,7 @@ const Register = () => {
             {loading ? "Registring..." : "Register"}
           </button>
         </form>
-        <div className="flex font-semibold text-[#4e525a] text-xs justify-center"><p className="pr-2 pb-2">Do you have already account! </p> <Link className="text-[#6E06F2]" to='/login' > Login</Link></div>
+        <div className="flex font-semibold text-[#4e525a] text-xs justify-center"><p className="pr-2 pb-2">Do you have already account! </p> <Link className="text-[#3F0091]" to='/login' > Login</Link></div>
       </div>
     </div>
   );

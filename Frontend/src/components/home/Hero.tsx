@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <div className=" w-full flex flex-col lg:flex-row px-5  lg:justify-between items-center justify-center lg:items-end">
       <div className=" lg:flex hidden gap-3 flex-col pl-5 pb-5">
-        <p className="text-2xl sm:text-3xl text-[#6E06F2] md:w-45 font-extrabold">
+        <p className="text-2xl sm:text-3xl text-[#3F0091] md:w-45 font-extrabold">
           MERN <span className="text-black">Stack Developer</span>
         </p>
         <p className="pt-2 text-sm w-70 font-bold text-[#4e525a]">
@@ -59,7 +59,7 @@ const Hero = () => {
       <div className=" hidden flex-col gap-9 lg:flex  md:pr-5 md:pb-5">
        {links.map((link, index) => {
         return <a key={index}  href={link.link}>
-          <button className=" cursor-pointer hover:bg-[#6E06F2] font-bold hover:text-white transition-all duration-300 ease-in-out hover:border-transparent border-2 flex justify-center items-center w-full px-7 shadow-lg py-1 rounded-full " key={index}>
+          <button className=" cursor-pointer hover:bg-[#3F0091] font-bold hover:text-white transition-all duration-300 ease-in-out hover:border-transparent border-2 flex justify-center items-center w-full px-7 shadow-lg py-1 rounded-full " key={index}>
           <FontAwesomeIcon icon={link.icon} />
           <p>{link.name}</p>
         </button>
@@ -67,7 +67,7 @@ const Hero = () => {
        })}
       </div>
       <div className="w-full md:px-3 pt-5 lg:hidden">
-        <p className="text-2xl sm:text-3xl text-[#6E06F2] font-extrabold">
+        <p className="text-2xl sm:text-3xl text-[#3F0091] font-extrabold">
           MERN <span className="text-black">Stack Developer</span>
         </p>
         <p className="pt-2 text-sm leading-7 tracking-wide sm:text-md font-semibold text-[#4e525a]">

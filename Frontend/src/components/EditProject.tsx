@@ -145,7 +145,7 @@ const EditProject = () => {
     <div className="w-full flex justify-center items-center min-h-screen">
       <Link to="/portfolio">
         {" "}
-        <div className="absolute top-2 left-6 md:left-10 md:top-10   text-[#6E06F2] flex gap-2">
+        <div className="absolute top-2 left-6 md:left-10 md:top-10   text-[#3F0091] flex gap-2">
           Go to home Page <ArrowBigLeft />{" "}
         </div>
       </Link>
@@ -156,7 +156,7 @@ const EditProject = () => {
         <form onSubmit={handleSubmit} className="px-3 flex flex-col gap-4">
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Project Name <span className="text-[#6E06F2]">*</span>
+              Project Name <span className="text-[#3F0091]">*</span>
             </p>
             <input
               value={projectName}
@@ -168,7 +168,7 @@ const EditProject = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Project Image <span className="text-[#6E06F2]">*</span>
+              Project Image <span className="text-[#3F0091]">*</span>
             </p>
             <input
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -182,7 +182,7 @@ const EditProject = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Project Link <span className="text-[#6E06F2]">*</span>
+              Project Link <span className="text-[#3F0091]">*</span>
             </p>
             <input
               value={projectLink}
@@ -194,7 +194,7 @@ const EditProject = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Github Link <span className="text-[#6E06F2]">*</span>
+              Github Link <span className="text-[#3F0091]">*</span>
             </p>
             <input
               value={githubLink}
@@ -206,7 +206,7 @@ const EditProject = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Used Languages<span className="text-[#6E06F2]">*</span>
+              Used Languages<span className="text-[#3F0091]">*</span>
             </p>
             <input
               value={languages}
@@ -218,7 +218,7 @@ const EditProject = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Description<span className="text-[#6E06F2]">*</span>
+              Description<span className="text-[#3F0091]">*</span>
             </p>
             <textarea
               value={description}
@@ -230,7 +230,7 @@ const EditProject = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Detailed Description<span className="text-[#6E06F2]">*</span>
+              Detailed Description<span className="text-[#3F0091]">*</span>
             </p>
             <textarea
               value={detailDescription}

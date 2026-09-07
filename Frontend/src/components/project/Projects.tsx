@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import axios from "axios";
 import LoadingPage from "../LoadingPage";
+import { Link } from "react-router-dom";
 interface allProjects {
   _id: string;
   description: string;
@@ -42,7 +43,7 @@ const Projects = () => {
     <div>
       <div className="flex px-10 flex-col justify-between  pt-10  justify-center w-full">
         <p className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl min-w-100 font-[800]">
-          My <span className="text-[#6e06f2]">Projects</span>
+          My <span className="text-[#3F0091]">Projects</span>
         </p>
         <div className="w-30 md:min-w-30 pt-4 xl:w-20 responsive4 h-full flex  justify-end items-start"></div>
         <div>
@@ -58,11 +59,13 @@ const Projects = () => {
             <div className="pt-10 px-10">
               <div className="w-full flex justify-center">
                 {" "}
+                    <Link target="_blank" to={element.liveLink}>
                 <img
                   className="md:max-w-150 lg:max-w-200 xl:max-w-220  shadow-[0px_5px_10px_2px_rgba(0,0,0,0.2)] rounded-lg "
                   src={element.projectImage}
                   alt={element.projectName}
                 />
+                </Link>
               </div>
               <div className="flex flex-col">
                 <div className="flex pt-5 pr-5 w-full justify-between items-center">
@@ -71,7 +74,7 @@ const Projects = () => {
                   </p>
                   <div>
                     <a href={element.liveLink} target="_blank">
-                      <div className="ml-2 flex justify-center items-center border-[1.5px] transition-all duration-300 ease-in-out w-[25px] p-1 h-[25px] rounded-full hover:text-white hover:border-transparent hover:bg-[#6e06f2] text-[#6e06f2] border-[#6e06f2]">
+                      <div className="ml-2 flex justify-center items-center border-[1.5px] transition-all duration-300 ease-in-out w-[25px] p-1 h-[25px] rounded-full hover:text-white hover:border-transparent hover:bg-[#3F0091] text-[#3F0091] border-[#3F0091]">
                         <ArrowUpRight />
                       </div>
                     </a>

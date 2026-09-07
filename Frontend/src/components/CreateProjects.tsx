@@ -56,7 +56,7 @@ const CreateProjects = () => {
 
   return (
     <div className="w-full flex justify-center items-center min-h-screen">
-           <Link to='/portfolio'> <div className="absolute top-2 left-6 md:left-10 md:top-10   text-[#6E06F2] flex gap-2">Go to home Page <ArrowBigLeft /> </div></Link>
+           <Link to='/portfolio'> <div className="absolute top-2 left-6 md:left-10 md:top-10   text-[#3F0091] flex gap-2">Go to home Page <ArrowBigLeft /> </div></Link>
       <div className="border-2 my-10 w-80 rounded-xl">
         <p className="flex justify-center py-2 text-xl font-bold text-[#4e525a]">
           Create Project
@@ -64,7 +64,7 @@ const CreateProjects = () => {
         <form onSubmit={handleSubmit} className="px-3 flex flex-col gap-4">
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Project Name <span className="text-[#6E06F2]">*</span>
+              Project Name <span className="text-[#3F0091]">*</span>
             </p>
             <input
               value={projectName}
@@ -77,7 +77,7 @@ const CreateProjects = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Project Image <span className="text-[#6E06F2]">*</span>
+              Project Image <span className="text-[#3F0091]">*</span>
             </p>
             <input
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -92,7 +92,7 @@ const CreateProjects = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Project Link <span className="text-[#6E06F2]">*</span>
+              Project Link <span className="text-[#3F0091]">*</span>
             </p>
             <input
               value={projectLink}
@@ -105,7 +105,7 @@ const CreateProjects = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Github Link <span className="text-[#6E06F2]">*</span>
+              Github Link <span className="text-[#3F0091]">*</span>
             </p>
             <input
               value={githubLink}
@@ -118,7 +118,7 @@ const CreateProjects = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Used Languages<span className="text-[#6E06F2]">*</span>
+              Used Languages<span className="text-[#3F0091]">*</span>
             </p>
             <input
               value={languages}
@@ -131,7 +131,7 @@ const CreateProjects = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Description<span className="text-[#6E06F2]">*</span>
+              Description<span className="text-[#3F0091]">*</span>
             </p>
             <textarea
               value={description}
@@ -144,7 +144,7 @@ const CreateProjects = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Detailed Description<span className="text-[#6E06F2]">*</span>
+              Detailed Description<span className="te3F0091]">*</span>
             </p>
             <textarea
               value={detailDescription}

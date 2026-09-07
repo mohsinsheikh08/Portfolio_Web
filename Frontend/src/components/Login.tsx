@@ -38,7 +38,7 @@ const Login = () => {
         <form onSubmit={handleSubmit} className="px-3 flex flex-col gap-4">
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Email <span className="text-[#6E06F2]">*</span>
+              Email <span className="text-[#3F0091]">*</span>
             </p>
             <input
               value={email}
@@ -51,7 +51,7 @@ const Login = () => {
           </label>
           <label>
             <p className="font-semibold text-[#4e525a]">
-              Password <span className="text-[#6E06F2]">*</span>
+              Password <span className="text-[3F0091]">*</span>
             </p>
             <input
               value={password}
@@ -70,7 +70,7 @@ const Login = () => {
             {loading ? "Logining..." : "Login"}
           </button>
         </form>
-         <div className="flex font-semibold text-[#4e525a] text-xs justify-center"><p className="pr-2 pb-2">If you don't have account! </p> <Link className="text-[#6E06F2]" to='/' > Register</Link></div>
+         <div className="flex font-semibold text-[#4e525a] text-xs justify-center"><p className="pr-2 pb-2">If you don't have account! </p> <Link className="text-[#3F0091]" to='/' > Register</Link></div>
       </div>
     </div>
   );

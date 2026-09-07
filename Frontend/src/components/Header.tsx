@@ -114,7 +114,7 @@ const Header = () => {
     <div>
       <div className="h-12  relative w-full flex items-center justify-between px-5 min-[800px]:px-10">
         <div className="bg-white flex hover:scale-110 transition-all duration-300 ease-in-out justify-between items-center px-3 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.2)] w-67 rounded-full h-[50%]">
-          <div className="h-3 w-3 rounded-full bg-[#6E06F2]"></div>
+          <div className="h-3 w-3 rounded-full bg-[#3F0091]"></div>
           <p className="text-[10px] font-bold text-[#4e525a]">
             Available for Internships & Freelance Projects
           </p>
@@ -123,7 +123,7 @@ const Header = () => {
         <div className="h-10 hidden md:flex justify-between items-center px-2 w-60 lg:w-100">
           <NavLink
             className={({ isActive }) => {
-              return isActive ? "text-[#6e06f2]" : "text-[#4e525a]";
+              return isActive ? "text-[#3F0091]" : "text-[#4e525a]";
             }}
             to="/portfolio"
           >
@@ -132,7 +132,7 @@ const Header = () => {
           <NavLink
             to="/projects"
             className={({ isActive }) => {
-              return isActive ? "text-[#6e06f2]" : "text-[#4e525a]";
+              return isActive ? "text-[#3F0091]" : "text-[#4e525a]";
             }}
           >
             <p className="text-sm font-semibold">Projects</p>
@@ -140,7 +140,7 @@ const Header = () => {
           <NavLink
             to="/about"
             className={({ isActive }) => {
-              return isActive ? "text-[#6e06f2]" : "text-[#4e525a]";
+              return isActive ? "text-[#3F0091]" : "text-[#4e525a]";
             }}
           >
             <p className="text-sm font-semibold">About</p>
@@ -224,7 +224,7 @@ const Header = () => {
                 setIsOpen(false);
                 if (link.onClick) link.onClick();
               }}
-              className={`h-1/3 ${link.color} flex items-center ${link.border} ${link.text} active:bg-[#6E06F2] active:text-white transition-all duration-200 ease-in-out px-3 border-b-2 border-gray-200 cursor-pointer`}
+              className={`h-1/3 ${link.color} flex items-center ${link.border} ${link.text} active:bg-[#3F0091] active:text-white transition-all duration-200 ease-in-out px-3 border-b-2 border-gray-200 cursor-pointer`}
             >
               <Link to={link.link} className="w-full h-full flex items-center">
                 <p className="font-bold flex gap-2">

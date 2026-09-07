@@ -40,7 +40,7 @@ const Skills = () => {
       <div className="py-3 md:px-0 flex justify-between items-center">
         <p className="text-3xl md:text-5xl font-extrabold">
           Skills
-          <span className="text-5xl sm:text-7xl text-[#6E06F2]">.</span>
+          <span className="text-5xl sm:text-7xl text-[#3F0091]">.</span>
         </p>
       </div>
       <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 pt-4 ">

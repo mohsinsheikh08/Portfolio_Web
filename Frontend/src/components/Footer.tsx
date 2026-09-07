@@ -38,7 +38,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="flex flex-col gap-10 justify-center bg-gradient-to-t from-[#e3e3e3] to-[white] mt-10 h-100 w-full flex flex-col justify-between'">
+    <div className="flex flex-col gap-10 pb-10 justify-center bg-gradient-to-t from-[#e3e3e3] to-[white] mt-10 h-100 w-full flex flex-col justify-between'">
       <div className="w-full h-[50%]  flex flex-col items-center justify-center pt-8">
         <div className="bg-white flex justify-between items-center mb-5 transition-all duration-300 cursor-pointer  hover:scale-105 px-2 shadow-[0px_2px_10px_2px_rgba(0,0,0,0.1)] font-[600] gap-2 py-[4px] rounded-full">
           <span className="w-3 h-3 bg-[#3F0091] rounded-full mb-[1px]"> </span>{" "}

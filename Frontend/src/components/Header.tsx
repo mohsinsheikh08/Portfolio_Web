@@ -113,7 +113,7 @@ const Header = () => {
   return (
     <div>
       <div className="h-12  relative w-full flex items-center justify-between px-5 min-[800px]:px-10">
-        <div className="bg-white flex hover:scale-110 transition-all duration-300 ease-in-out justify-between items-center px-3 shadow-[0px_5px_10px_0px_rgba(0,0,0,0.2)] w-67 rounded-full h-[50%]">
+        <div className="bg-white flex hover:scale-110 transition-all duration-300 ease-in-out justify-between items-center px-3 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.2)] w-67 rounded-full h-[50%]">
           <div className="h-3 w-3 rounded-full bg-[#6E06F2]"></div>
           <p className="text-[10px] font-bold text-[#4e525a]">
             Available for Internships & Freelance Projects
@@ -151,19 +151,19 @@ const Header = () => {
           <div className="flex">
             <Link to="/about">
               <div className="h-8 hidden md:flex w-30">
-                <button className="text-sm flex bg-black text-white font-bold justify-center items-center gap-2 hover:scale-110 transition-all duration-300 ease-in-out px-3 py-1 rounded-full">
+                <button className="text-sm cursor-pointer flex bg-black text-white font-bold justify-center items-center gap-2 hover:scale-110 transition-all duration-300 ease-in-out px-3 py-1 rounded-full">
                   Let's Talk <MoveUpRight size={20} />
                 </button>
               </div>
             </Link>
             <Link to="/login">
-              <button className="hidden md:flex text-sm font-bold px-3 py-1 rounded-full cursor-pointer transition-all duration-300">
+              <button className="hidden   md:flex text-sm font-bold px-3 py-1 rounded-full cursor-pointer transition-all duration-300">
                 Login
               </button>
             </Link>
             <button
               onClick={handleLogout}
-              className="hidden md:flex text-sm font-bold px-3 py-1 rounded-full cursor-pointer transition-all duration-300"
+              className="hidden md:flex  text-sm font-bold px-3 py-1 rounded-full cursor-pointer transition-all duration-300"
             >
               Logout
             </button>
@@ -172,13 +172,13 @@ const Header = () => {
           <div className="hidden md:flex items-center  gap-2">
             {role === "User" ? (
               <Link to="/about">
-                <button className="text-sm flex bg-black text-white font-bold justify-center items-center gap-2 hover:scale-110 transition-all duration-300 ease-in-out px-3 py-1 rounded-full">
+                <button className="text-sm cursor-pointer flex bg-black text-white font-bold justify-center items-center gap-2 hover:scale-110 transition-all duration-300 ease-in-out px-3 py-1 rounded-full">
                   Let's Talk <MoveUpRight size={20} />
                 </button>
               </Link>
             ) : (
               <Link to="/create-project">
-                <button className="text-sm flex bg-black text-white truncate font-bold justify-center items-center gap-2 hover:scale-110 transition-all duration-300 ease-in-out px-3 py-1 rounded-full">
+                <button className="text-sm cursor-pointer flex bg-black text-white truncate font-bold justify-center items-center gap-2 hover:scale-110 transition-all duration-300 ease-in-out px-3 py-1 rounded-full">
                   Create Project <MoveUpRight size={20} />
                 </button>
               </Link>
@@ -210,7 +210,7 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`absolute md:hidden h-38 w-full transition-all z-2 duration-500 ease-in-out ${
+        className={`absolute top-11 md:hidden h-38 w-full transition-all z-2 duration-500 ease-in-out ${
           isOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-2 pointer-events-none"

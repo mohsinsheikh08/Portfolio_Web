@@ -21,7 +21,6 @@ const Header = () => {
 useEffect(() => {
   const getData = async () => {
     try {
-      // Bina token ke bhi API call karo
       const response = await axios.get(
         `${import.meta.env.VITE_API_URL}/api/auth/get-user`,
         { withCredentials: true }

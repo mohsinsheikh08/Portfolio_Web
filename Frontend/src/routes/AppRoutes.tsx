@@ -7,7 +7,6 @@ import CreateProjects from "../components/CreateProjects.js";
 import Login from "../components/Login.js";
 import Register from "../components/Register.js";
 import EditProject from "../components/EditProject.js";
-import ProtectedRoutes from "../components/ProtectedRoutes.js";
 
 const AppRoutes = () => {
   const location = useLocation();

@@ -19,25 +19,29 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/auth/get-user`,
-          { withCredentials: true },
-        );
-        setRole(response?.data?.user?.role || "User");
-      } catch (error) {
-        if (axios.isAxiosError(error)) {
-                 console.log("Error status:", error.response?.status);
-                 console.log("Error data:", error.response?.data);
-                 console.log("Error message:", error.response?.data?.message);
-
-        }
-        setRole("User");
+  const getData = async () => {
+    try {
+      const token = document.cookie.includes("token");
+      if (!token) {
+        setRole("User"); 
+        return;
       }
-    };
-    getData();
-  }, []);
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/auth/get-user`,
+        { withCredentials: true }
+      );
+      setRole(response?.data?.user?.role || "User");
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        console.log("Error status:", error.response?.status);
+        console.log("Error data:", error.response?.data);
+        console.log("Error message:", error.response?.data?.message);
+      }
+      setRole("User"); 
+    }
+  };
+  getData();
+}, []);
 
   const handleLogout = async () => {
     try {

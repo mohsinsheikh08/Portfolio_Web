@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import Home from "../components/home/Home.js";
 import Projects from "../components/project/Projects.js";
@@ -25,6 +25,7 @@ const AppRoutes = () => {
           <Route path="/about" element={<About />} />
           <Route path="/create-project" element={<CreateProjects />} />
           <Route path="/edit-project/:id" element={<EditProject />} />
+          <Route path="/portfolio" element={<Navigate to="/" replace />} />
         </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />

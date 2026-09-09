@@ -7,6 +7,8 @@ import CreateProjects from "../components/CreateProjects.js";
 import Login from "../components/Login.js";
 import Register from "../components/Register.js";
 import EditProject from "../components/EditProject.js";
+import Header from "../components/Header.js";
+import Footer from "../components/Footer.js";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -17,6 +19,7 @@ const AppRoutes = () => {
 
   return (
     <div>
+      <Header />
       <Routes location={location}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
@@ -27,6 +30,7 @@ const AppRoutes = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

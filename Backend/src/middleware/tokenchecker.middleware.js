@@ -1,31 +1,31 @@
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+
 const tokenChecker = async (req, res, next) => {
     try {
         const token = req.cookies.token;
 
         if (!token) {
-            return res.status(401).json({
-                message: "Authentication required! Please login first."
+            return res.status(200).json({
+                message: "No user logged in!",
+                user: null
             });
         }
 
-
         const decoded = jwt.verify(token, process.env.JWT_KEY);
+        req.user = decoded;
 
-        req.user = decoded
-
-        if (decoded.role === "User") {
-            return res.status(409).json({
-                message: "This page can only access admin!"
-            })
+        if (decoded.role !== "Admin") {
+            return res.status(200).json({
+                message: "Admin access required!"
+            });
         }
-        next()
+        next();
     } catch (err) {
-        return res.status(409).json({
+        return res.status(200).json({
             message: "Something is wrong!",
-            Error: err.message
-        })
+            user: null
+        });
     }
-}
+};
 
-module.exports = tokenChecker
+module.exports = tokenChecker;

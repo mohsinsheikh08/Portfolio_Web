@@ -19,18 +19,46 @@ const AppRoutes = () => {
 
   return (
     <div>
-      <Header />
       <Routes location={location}>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
+        {/* Home, Projects, About par Header + Footer */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <Home />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <>
+              <Header />
+              <Projects />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Header />
+              <About />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Login, Register, Create, Edit par Header + Footer NAHI */}
         <Route path="/create-project" element={<CreateProjects />} />
         <Route path="/edit-project/:id" element={<EditProject />} />
         <Route path="/portfolio" element={<Navigate to="/" replace />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
-      <Footer />
     </div>
   );
 };

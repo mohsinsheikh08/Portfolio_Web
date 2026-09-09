@@ -19,14 +19,12 @@ const AppRoutes = () => {
   return (
     <div>
       <Routes location={location}>
-        <Route element={<ProtectedRoutes />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/create-project" element={<CreateProjects />} />
-          <Route path="/edit-project/:id" element={<EditProject />} />
-          <Route path="/portfolio" element={<Navigate to="/" replace />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/create-project" element={<CreateProjects />} />
+        <Route path="/edit-project/:id" element={<EditProject />} />
+        <Route path="/portfolio" element={<Navigate to="/" replace />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>

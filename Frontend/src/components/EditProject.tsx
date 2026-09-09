@@ -82,7 +82,7 @@ const EditProject = () => {
           withCredentials: true,
         },
       );
-      navigate("/portfolio");
+      navigate("/");
     } catch (error) {
       if (axios.isAxiosError(error)) {
         console.log("Error status:", error.response?.status);
@@ -143,7 +143,7 @@ const EditProject = () => {
   }
   return (
     <div className="w-full flex justify-center items-center min-h-screen">
-      <Link to="/portfolio">
+      <Link to="/">
         {" "}
         <div className="absolute top-2 left-6 md:left-10 md:top-10   text-[#3F0091] flex gap-2">
           Go to home Page <ArrowBigLeft />{" "}

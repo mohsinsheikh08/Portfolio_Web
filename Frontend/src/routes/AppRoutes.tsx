@@ -13,20 +13,20 @@ const AppRoutes = () => {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
 
   return (
     <div>
       <Routes location={location}>
         <Route element={<ProtectedRoutes />}>
-          <Route path="/portfolio" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/create-project" element={<CreateProjects />} />
           <Route path="/edit-project/:id" element={<EditProject />} />
         </Route>
-        <Route path="/" element={<Register />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </div>

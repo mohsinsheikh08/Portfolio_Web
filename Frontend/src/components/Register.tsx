@@ -23,7 +23,7 @@ const Register = () => {
       },{
         withCredentials: true
       });
-      navigate('/portfolio')
+      navigate('/')
     } catch (error) {
      if(axios.isAxiosError(error)){
               console.log("Error status:", error.response?.status);

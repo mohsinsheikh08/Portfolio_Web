@@ -17,7 +17,7 @@ const Login = () => {
       },{
         withCredentials: true
       });
-      navigate('/portfolio')
+      navigate('/')
     } catch (error) {
       if(axios.isAxiosError(error)){
                 console.log("Error status:", error.response?.status);
@@ -70,7 +70,7 @@ const Login = () => {
             {loading ? "Logining..." : "Login"}
           </button>
         </form>
-         <div className="flex font-semibold text-[#4e525a] text-xs justify-center"><p className="pr-2 pb-2">If you don't have account! </p> <Link className="text-[#3F0091]" to='/' > Register</Link></div>
+         <div className="flex font-semibold text-[#4e525a] text-xs justify-center"><p className="pr-2 pb-2">If you don't have account! </p> <Link className="text-[#3F0091]" to='/register' > Register</Link></div>
       </div>
     </div>
   );

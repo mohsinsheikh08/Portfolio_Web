@@ -56,7 +56,7 @@ const Header = () => {
   const linksMobile: Links[] = [
     {
       name: "Home",
-      link: "/portfolio",
+      link: "/",
       color: "bg-white",
       text: "text-[#4e525a]",
     },
@@ -77,6 +77,12 @@ const Header = () => {
         {
       name: "Login",
       link: "/login",
+      color: "bg-white",
+      text: "text-[#4e525a]",
+    },
+    {
+      name: "Register",
+      link: "/register",
       color: "bg-white",
       text: "text-[#4e525a]",
     }]: []),
@@ -125,7 +131,7 @@ const Header = () => {
             className={({ isActive }) => {
               return isActive ? "text-[#3F0091]" : "text-[#4e525a]";
             }}
-            to="/portfolio"
+            to="/"
           >
             <p className="text-sm font-semibold">Home</p>
           </NavLink>
@@ -159,6 +165,11 @@ const Header = () => {
             <Link to="/login">
               <button className="hidden   md:flex text-sm font-bold px-3 py-1 rounded-full cursor-pointer transition-all duration-300">
                 Login
+              </button>
+            </Link>
+            <Link to="/register">
+              <button className="hidden   md:flex text-sm font-bold px-3 py-1 rounded-full cursor-pointer transition-all duration-300">
+                Register
               </button>
             </Link>
             <button

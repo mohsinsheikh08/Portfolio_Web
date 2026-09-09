@@ -18,14 +18,10 @@ const Header = () => {
   const [role, setRole] = useState<string>("User");
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  useEffect(() => {
+useEffect(() => {
   const getData = async () => {
     try {
-      const token = document.cookie.includes("token");
-      if (!token) {
-        setRole("User"); 
-        return;
-      }
+      // Bina token ke bhi API call karo
       const response = await axios.get(
         `${import.meta.env.VITE_API_URL}/api/auth/get-user`,
         { withCredentials: true }
@@ -37,7 +33,7 @@ const Header = () => {
         console.log("Error data:", error.response?.data);
         console.log("Error message:", error.response?.data?.message);
       }
-      setRole("User"); 
+      setRole("User");
     }
   };
   getData();

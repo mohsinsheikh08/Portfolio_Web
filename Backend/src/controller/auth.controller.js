@@ -49,38 +49,35 @@ const userRegister = async (req, res) => {
 }
 
 const getMe = async (req, res) => {
-    try{
-     const token = req.cookies.token;
-     if(!token){
-        return res.status(200).json({
-            user: null
-        })
-     }
-
-     const decoded = jwt.verify(token, process.env.JWT_KEY);
-     const userId = decoded.id
-     const user = await userModel.findById(userId).select('-password');
-     if(!user){
-        return res.status(200).json({
-            user: null
-        })
-     }
-     const role = user?.role === "Admin" ? "Admin": "User"
-     return res.status(200).json({
-        message: `${role} fetched successfully!`,
-        user: {
-            id: user._id,
-            fullName: user.fullName,
-            email: user.email,
-            role : user.role,
-        }
-     })
-     }catch(err){
-        return res.status(200).json({
-            user: null
-        })
-     }
-}
+  try {
+    const token = req.cookies.token;
+    if (!token) {
+      return res.status(200).json({
+        user: null
+      });
+    }
+    const decoded = jwt.verify(token, process.env.JWT_KEY);
+    const userId = decoded.id;
+    const user = await userModel.findById(userId).select('-password');
+    if (!user) {
+      return res.status(200).json({
+        user: null
+      });
+    }
+    return res.status(200).json({
+      user: {
+        id: user._id,
+        fullName: user.fullName,
+        email: user.email,
+        role: user.role
+      }
+    });
+  } catch (err) {
+    return res.status(200).json({
+      user: null
+    });
+  }
+};
 
 const userLogin = async (req, res) => {
     try {

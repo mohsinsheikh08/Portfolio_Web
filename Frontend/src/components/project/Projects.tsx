@@ -16,11 +16,11 @@ interface allProjects {
 
 const Projects = () => {
   const [projects, setProjects] = useState<allProjects[]>([]);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const getData = async () => {
       try {
-        setLoading(true)
+        setLoading(true);
         const response = await axios.get(
           `${import.meta.env.VITE_API_URL}/api/project/all-projects`,
         );
@@ -31,14 +31,14 @@ const Projects = () => {
           console.log("Error data:", error.response?.data);
           console.log("Error message:", error.response?.data?.message);
         }
-      }finally{
-        setLoading(false)
+      } finally {
+        setLoading(false);
       }
     };
     getData();
   }, []);
 
-    if (loading) return <LoadingPage />;
+  if (loading) return <LoadingPage />;
   return (
     <div>
       <div className="flex px-10 flex-col justify-between  pt-10  justify-center w-full">
@@ -48,8 +48,8 @@ const Projects = () => {
         <div className="w-30 md:min-w-30 pt-4 xl:w-20 responsive4 h-full flex  justify-end items-start"></div>
         <div>
           <p className="text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl xl:w-190 text-[#4F5863] ">
-            Designing and developing modern, full-stack web applications with
-            React, Node.js, and TypeScript.
+            I build real products — not tutorials. React, Next.js, Node.js, and
+            AI integrations.
           </p>
         </div>
       </div>
@@ -59,12 +59,12 @@ const Projects = () => {
             <div className="pt-10 px-10">
               <div className="w-full flex justify-center">
                 {" "}
-                    <Link target="_blank" to={element.liveLink}>
-                <img
-                  className="md:max-w-150 lg:max-w-200 xl:max-w-220  shadow-[0px_5px_10px_2px_rgba(0,0,0,0.2)] rounded-lg "
-                  src={element.projectImage}
-                  alt={element.projectName}
-                />
+                <Link target="_blank" to={element.liveLink}>
+                  <img
+                    className="md:max-w-150 lg:max-w-200 xl:max-w-220  shadow-[0px_5px_10px_2px_rgba(0,0,0,0.2)] rounded-lg "
+                    src={element.projectImage}
+                    alt={element.projectName}
+                  />
                 </Link>
               </div>
               <div className="flex flex-col">

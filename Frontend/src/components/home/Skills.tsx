@@ -4,6 +4,7 @@ const Skills = () => {
       category: "Frontend",
       skills: [
         "React",
+        "Next.js",
         "TypeScript",
         "Tailwind CSS",
         "JavaScript (ES6+)",
@@ -12,7 +13,24 @@ const Skills = () => {
     },
     {
       category: "Backend",
-      skills: ["Node.js", "Express.js", "MongoDB"],
+      skills: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "JWT Authentication",
+        "REST APIs",
+      ],
+    },
+        {
+      category: "AI & Tools",
+      skills: [
+        "Google Gemini API",
+        "Zod Validation",
+        "Git & GitHub",
+        "Vercel & Railway",
+        "ImageKit & Cloudinary",
+      ],
     },
     {
       category: "Design & Tools",

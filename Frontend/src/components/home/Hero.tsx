@@ -35,12 +35,10 @@ const Hero = () => {
     <div className=" w-full flex flex-col lg:flex-row px-5  lg:justify-between items-center justify-center lg:items-end">
       <div className=" lg:flex hidden gap-3 flex-col pl-5 pb-5">
         <p className="text-2xl sm:text-3xl text-[#3F0091] md:w-45 font-extrabold">
-          MERN <span className="text-black">Stack Developer</span>
+          Full-Stack <span className="text-black">Developer</span>
         </p>
         <p className="pt-2 text-sm w-70 font-bold text-[#4e525a]">
-          I'm Mohsin Sheikh — MERN Stack Developer. I turn ideas into scalable,
-          full-stack web applications that solve real problems and drive
-          business growth.
+          I'm Mohsin Sheikh — Full-Stack Developer. I build production-ready web apps with React, Next.js, and Node.js.
         </p>
         <a className="w-33 " href={MY_CV} target="_blank">
           <button  className="text-sm shadow-lg w-full flex mt-2 bg-black text-white font-bold justify-center items-center gap-2 hover:scale-110 transition-all duration-300 ease-in-out px-3 py-1 rounded-full">

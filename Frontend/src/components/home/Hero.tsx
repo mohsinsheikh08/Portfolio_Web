@@ -1,7 +1,7 @@
 import MyImg from "../../assets/MyPic1.png";
 import MyName from "../../assets/MyName.png";
 import { MoveUpRight } from "lucide-react";
-import MY_CV from "../../assets/Mohsin-CV.png";
+import MY_CV from "../../assets/Mohsin-Sheikh-FullStack-Developer.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faFacebook, faInstagram, faLinkedin, type IconDefinition } from "@fortawesome/free-brands-svg-icons";
 

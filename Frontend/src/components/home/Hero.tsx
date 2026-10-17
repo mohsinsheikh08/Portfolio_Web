@@ -65,13 +65,11 @@ const Hero = () => {
        })}
       </div>
       <div className="w-full md:px-3 pt-5 lg:hidden">
-        <p className="text-2xl sm:text-3xl text-[#3F0091] font-extrabold">
-          MERN <span className="text-black">Stack Developer</span>
+        <p className="text-2xl sm:text-3xl text-[#3F0091] md:w-45 font-extrabold">
+          Full-Stack <span className="text-black">Developer</span>
         </p>
-        <p className="pt-2 text-sm leading-7 tracking-wide sm:text-md font-semibold text-[#4e525a]">
-          I'm Mohsin Sheikh — MERN Stack Developer. I turn ideas into scalable,
-          full-stack web applications that solve real problems and drive
-          business growth.
+        <p className="pt-2 text-sm w-70 font-bold text-[#4e525a]">
+          I'm Mohsin Sheikh — Full-Stack Developer. I build production-ready web apps with React, Next.js, and Node.js.
         </p>
         <a href={MY_CV} target="_blank">
           {" "}
